@@ -1,0 +1,8 @@
+########
+## Local .gitignore file - created by 'git-setup'
+
+## Mac OS X system files
+.DS_Store
+.Trashes
+*.swp
+profile
