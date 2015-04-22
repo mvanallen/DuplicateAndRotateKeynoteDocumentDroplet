@@ -1,0 +1,14 @@
+#!/usr/bin/osascript
+
+tell application "Script Editor"
+	set theScript to (read POSIX file "./Script")
+	
+	set Droplet to make new document with data theScript
+	set language of Droplet to item 2 of every language --> "jscr"
+	
+	compile Droplet
+	
+	save Droplet as "application" in file ((path to desktop as Unicode text) & "Rotate Keynote Droplet.app")
+	
+	close every document saving no
+end tell
